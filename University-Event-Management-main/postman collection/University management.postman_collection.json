@@ -1,0 +1,361 @@
+{
+	"info": {
+		"_postman_id": "cf5c2573-136e-49c5-8820-022e3a7e7070",
+		"name": "University management",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "student",
+			"item": [
+				{
+					"name": "add student",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"studentId\": 1,\r\n    \"firstName\": \"Ankita\",\r\n    \"lastName\": \"Rajpoot\",\r\n    \"age\": 23,\r\n    \"studentDepartment\": \"CSE\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/student",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"student"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List of students",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    {\r\n        \"studentId\": 2,\r\n        \"firstName\": \"Ankii\",\r\n        \"lastName\": \"Raj\",\r\n        \"age\": 23,\r\n        \"studentDepartment\": \"ME\"\r\n    },\r\n    {\r\n        \"studentId\": 3,\r\n        \"firstName\": \"Nikita\",\r\n        \"lastName\": \"Raj\",\r\n        \"age\": 23,\r\n        \"studentDepartment\": \"CIVIL\"\r\n    }\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/students",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"students"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get list of students",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"studentId\": 1,\r\n    \"firstName\": \"Ankita\",\r\n    \"lastName\": \"Rajpoot\",\r\n    \"age\": 23,\r\n    \"studentDepartment\": \"CSE\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/students",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"students"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get student by id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"studentId\": 1,\r\n    \"firstName\": \"Ankita\",\r\n    \"lastName\": \"Rajpoot\",\r\n    \"age\": 23,\r\n    \"studentDepartment\": \"CSE\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/student/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"student",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update department based on id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    {\r\n        \"studentId\": 2,\r\n        \"firstName\": \"Ankii\",\r\n        \"lastName\": \"Raj\",\r\n        \"age\": 23,\r\n        \"studentDepartment\": \"ME\"\r\n    },\r\n    {\r\n        \"studentId\": 3,\r\n        \"firstName\": \"Nikita\",\r\n        \"lastName\": \"Raj\",\r\n        \"age\": 23,\r\n        \"studentDepartment\": \"CIVIL\"\r\n    }\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/student/1/ME",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"student",
+								"1",
+								"ME"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List of students Copy 2",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    {\r\n        \"studentId\": 2,\r\n        \"firstName\": \"Ankii\",\r\n        \"lastName\": \"Raj\",\r\n        \"age\": 23,\r\n        \"studentDepartment\": \"ME\"\r\n    },\r\n    {\r\n        \"studentId\": 3,\r\n        \"firstName\": \"Nikita\",\r\n        \"lastName\": \"Raj\",\r\n        \"age\": 23,\r\n        \"studentDepartment\": \"CIVIL\"\r\n    }\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/student/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"student",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Event",
+			"item": [
+				{
+					"name": "Add list of events",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    {\r\n        \"eventId\": 2,\r\n        \"eventName\": \"Tech workshop\",\r\n        \"locationOfEvent\": \"Main Auditorium\",\r\n        \"eventDate\": \"2024-03-12\",\r\n        \"startTime\": \"09:00:00\",\r\n        \"endTime\": \"17:00:00\"\r\n    },\r\n    {\r\n        \"eventId\": 3,\r\n        \"eventName\": \"Workshop\",\r\n        \"locationOfEvent\": \"Conference Room 1\",\r\n        \"eventDate\": \"2024-03-15\",\r\n        \"startTime\": \"10:00:00\",\r\n        \"endTime\": \"12:00:00\"\r\n    }\r\n]\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/events",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"events"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get events",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/events",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"events"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get event by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/event/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"event",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get event by date",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/events/date?date=2024-03-12",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"events",
+								"date"
+							],
+							"query": [
+								{
+									"key": "date",
+									"value": "2024-03-12"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Event Location by ID",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/event/id/1/location/confrence room2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"event",
+								"id",
+								"1",
+								"location",
+								"confrence room2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Remove Event by ID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/event/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"event",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add single event",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"eventId\": 1,\r\n    \"eventName\": \"Technical Conference\",\r\n    \"locationOfEvent\": \"Third Auditorium\",\r\n    \"eventDate\": \"2024-03-13\",\r\n    \"startTime\": \"10:00:00\",\r\n    \"endTime\": \"17:00:00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/event",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"event"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
